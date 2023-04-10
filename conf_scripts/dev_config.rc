@@ -1,0 +1,19 @@
+export CUDA_DEVICE_ORDER=PCI_BUS_ID
+export CUDA_VISIBLE_DEVICES=0
+export NUMA_NODE=1
+export NUMA_CORE_MASK=20,21,22,23,24
+#export P2P_RPC_DPDK_PORT=2
+export P2P_RPC_DPDK_PORT=0
+export DPDK_LCORES=16,17,18,19,20
+
+export SERVER_IF=enp219s0f0
+export SERVER_IP=192.168.25.1
+export SERVER_MAC=b8:ce:f6:cc:6a:52
+
+export CLIENT_IF=enp216s0
+export CLIENT_IP=192.168.25.2
+export CLIENT_MAC=0c:42:a1:10:41:18
+
+export BF_IF=
+export BF_IP=192.168.25.3
+export BF_MAC=

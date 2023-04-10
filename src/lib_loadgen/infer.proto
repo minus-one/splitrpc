@@ -1,0 +1,26 @@
+// Copyright (c) Adithya Kumar, The Pennsylvania State University. All rights reserved.
+// Licensed under the MIT License.
+
+syntax = "proto3";
+package doinference;
+
+// Service which schedules any inference request
+service Scheduler {
+  rpc runJob (ScheduleRequest) returns (ScheduleReply) {}
+}
+
+// Message which contains info about the job to be scheduled
+message ScheduleRequest {
+  uint64 guid = 1;
+  uint32 funcid = 2;
+  bytes payload = 3;
+  uint32 size = 4;
+}
+
+// The response message containing the results of the job
+message ScheduleReply {
+  uint64 guid = 1;
+  uint32 funcid = 2;
+  bytes payload = 3;
+  uint32 size = 4;
+}

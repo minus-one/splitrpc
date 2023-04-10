@@ -1,0 +1,12 @@
+export CUDA_PATH=/usr/local/cuda-11.4
+export GDR_PATH=/data/azk68/gdrcopy/install_dir/
+export DPDK_PATH=/data/azk68/dpdk_install
+export P2P_RPC_BASE_PATH=/data/azk68/p2p-rpc
+
+export ORT_PATH=/data/azk68/onnxruntime
+export P2P_DATA_SET_PATH=/data/azk68/datasets/
+
+export PKG_CONFIG_PATH=${DPDK_PATH}/lib/x86_64-linux-gnu/pkgconfig
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_PATH}/lib64/:${DPDK_PATH}/lib/x86_64-linux-gnu/:${GDR_PATH}/lib:${ORT_PATH}/build/cuda/RelWithDebInfo/
+#export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${CUDA_PATH}/lib64/:${DPDK_PATH}/lib/x86_64-linux-gnu/:${GDR_PATH}/lib:${ORT_PATH}/build/trt/RelWithDebInfo/
+export CUDA_ARCH_CODE_GEN=80
